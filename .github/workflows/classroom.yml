@@ -40,11 +40,11 @@ jobs:
         command: python test_chapter01_03.py
         timeout: 1
         max-score: 1
-    - name: task4
-      id: task4
+    - name: task2
+      id: task2
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: task4
+        test-name: task2
         setup-command: ''
         command: python test_chapter01_02.py
         timeout: 1
@@ -89,6 +89,7 @@ jobs:
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TASK1_RESULTS: "${{steps.task1.outputs.result}}"
+        TASK2_RESULTS: "${{steps.task2.outputs.result}}"
         TASK4_RESULTS: "${{steps.task4.outputs.result}}"
         TASK3_RESULTS: "${{steps.task3.outputs.result}}"
         TASK5_RESULTS: "${{steps.task5.outputs.result}}"
@@ -96,4 +97,4 @@ jobs:
         TASK7_RESULTS: "${{steps.task7.outputs.result}}"
         TASK8_RESULTS: "${{steps.task8.outputs.result}}"
       with:
-        runners: task1,task4,task3,task4,task5,task6,task7,task8
+        runners: task1,task2,task3,task4,task5,task6,task7,task8
