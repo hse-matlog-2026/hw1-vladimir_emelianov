@@ -89,12 +89,12 @@ jobs:
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TASK1_RESULTS: "${{steps.task1.outputs.result}}"
-        TASK2_RESULTS: "${{steps.task2.outputs.result}}"
         TASK4_RESULTS: "${{steps.task4.outputs.result}}"
         TASK3_RESULTS: "${{steps.task3.outputs.result}}"
+        TASK2_RESULTS: "${{steps.task2.outputs.result}}"
         TASK5_RESULTS: "${{steps.task5.outputs.result}}"
         TASK6_RESULTS: "${{steps.task6.outputs.result}}"
         TASK7_RESULTS: "${{steps.task7.outputs.result}}"
         TASK8_RESULTS: "${{steps.task8.outputs.result}}"
       with:
-        runners: task1,task2,task3,task4,task5,task6,task7,task8
+        runners: task1,task4,task3,task2,task5,task6,task7,task8
