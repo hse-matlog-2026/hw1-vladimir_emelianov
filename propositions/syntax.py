@@ -341,7 +341,7 @@ class Formula:
             (((q&r)->(q&r))|p)
         """
         for variable in substitution_map:
-            assert is_variable(variable)
+            assert is_variable(variable) 
         if is_variable(self.root):
             return substitution_map.get(self.root, self)
         if is_constant(self.root):
